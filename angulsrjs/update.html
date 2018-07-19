@@ -1,0 +1,9 @@
+
+<div ng-controller="updateController" class="custForm" *ngIf="customer">
+    <h1>Customer Update</h1>
+    <form name="form" (ngSubmit) = "update()" #fany = "ngForm" >
+        <input type="text" name="ucname" required #ucname="ngModel" [(ngModel)]="customer.cname" placeholder="Customer Name"/>
+        <input type="text" name="unic" required #unic="ngModel" [(ngModel)]="customer.nic" placeholder="NIC" readonly/>
+        <Button  class="submit">Update</Button>
+    </form>
+</div>
